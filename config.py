@@ -5,4 +5,5 @@ class Config(object):
 
 class DevelopmentConfig(object):
     DEBUG = True
-    B2B_PROCESSOR_URL = "http://localhost:5002"
+    AUTOMATION_IND = True
+
