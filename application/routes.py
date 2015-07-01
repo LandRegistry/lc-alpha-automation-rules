@@ -13,16 +13,11 @@ def index():
 def check_auto():
     logging.info("check_auto")
 
-    auto = app.config['AUTOMATION_IND']
+    auto_ind = app.config['AUTOMATION_IND']
 
-    if auto:
-        data = {
-            "register_auto": True
-        }
-    else:
-        data = {
-            "register_auto": False
-        }
+    data = {
+        "register_auto": auto_ind
+    }
 
     return Response(json.dumps(data), status=200, mimetype='application/json')
 
