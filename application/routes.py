@@ -20,4 +20,3 @@ def check_auto():
     }
 
     return Response(json.dumps(data), status=200, mimetype='application/json')
-
