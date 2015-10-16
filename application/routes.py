@@ -9,6 +9,15 @@ def index():
     return Response(status=200)
 
 
+@app.route('/health', methods=['GET'])
+def health():
+    result = {
+        'status': 'OK',
+        'dependencies': {}
+    }
+    return Response(json.dumps(result), status=200, mimetype='application/json')
+
+
 @app.route('/check_auto', methods=['POST'])
 def check_auto():
     logging.info("check_auto")
